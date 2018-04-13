@@ -1,7 +1,83 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+
+socialnav {
+    float: right;
+    text-align: left;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
 <body>
-<h1>Ethan Marsland Portfolio</h1>
-<p>This page is a placeholder..</p>
+
+<div class="container">
+
+<header>
+   <h1>Ethan Marsland's Portfolio</h1>
+   <p>C++/Python Programmer</p>
+
+   <socialnav>
+        <a href="#">Linkedin</a>   <a href="#">about.me</a>    <a href="#">Vimeo</a>
+    </socialnav>
+</header> 
+
+<nav>
+    <ul>
+        <h2>Projects</h2>
+        <li><a href="#">Paradox Reflection</a></li>
+        <li><a href="#">OpenGL Application</a></li>
+        <li><a href="#">Unreal Engine 4 Plugin</a></li>
+    </ul>
+</nav>
+
+<article>
+  <h1>Home Page</h1>
+  <p>My name is Ethan Marsland and I am a computer programmer specialised in game development. A few areas of expertise are Physics, Networking, Software Design, and Artificial Intelligence.</p>
+  <p>In March 2018 I graduated from the Academy of Interactive Entertainment, and now intend to study Pschyology. This portfolio shows some of my work as a programmer, such as games and UE4 plugins. </p>
+</article>
+
+<footer>Copyright &copy; Ethan Marsland, 2018</footer>
+
+</div>
+
 </body>
 </html>
