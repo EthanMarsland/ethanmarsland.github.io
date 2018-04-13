@@ -20,7 +20,7 @@ nav {
     float: left;
     max-width: 160px;
     margin: 0;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 
@@ -28,7 +28,7 @@ socialnav {
     float: center;
     text-align: right;
     margin: 0;
-    padding: 1em;
+    padding: 2em;
 }
 
 nav ul {
@@ -38,6 +38,12 @@ nav ul {
    
 nav ul a {
     text-decoration: none;
+}
+
+ul bodylist { 
+    list-style-type: lower-alpha;
+    padding: 0;
+    font-family: Lato,Arial,Helvetica,sans-serif;
 }
 
 article {
@@ -66,6 +72,16 @@ p.sansserif {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
  }
+
+ a:link, a:visited {
+    color: rgb(69, 136, 114);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(139, 105, 138);
+    text-decoration: underline;
+}
 
 </style>
 </head>
@@ -105,14 +121,25 @@ p.sansserif {
         <li><a href="#">Paradox Reflection</a></li>
         <li><a href="#">OpenGL Application</a></li>
         <li><a href="#">Unreal Engine 4 Plugin</a></li>
+        <li><a href="#">UE4 Prototype</a></li>
+        <li><a href="#">Dice Poker</a></li>
     </ul>
 </nav>
-
+<!--profile-->
 <article>
-  <h1>Home Page</h1>
-  <p class = "sansserif">My name is Ethan Marsland and I am a computer programmer specialised in game development. A few areas of expertise are Physics, Networking, Software Design, and Artificial Intelligence.</p>
+  <h1>Profile</h1>
+  <p class = "sansserif">My name is Ethan Marsland and I am an Australian C++/Python Programmer specialised in game development. A few areas of expertise are: </p>
+  <p class = "sansserif">
+      <ul>
+            <li><bodylist>Physics</bodylist></li>
+            <li><bodylist>Networking</bodylist></li>        
+            <li><bodylist>Software Design</bodylist></li>
+            <li><bodylist>Artificial Intelligence</bodylist></li>
+      </ul>
+
+  </p>
   <p class = "sansserif">In March 2018 I graduated from the Academy of Interactive Entertainment, and now intend to study Psychology. This portfolio shows some of my work as a programmer, such as games and UE4 plugins.</p>
-  <p class = "sansserif"> This site is still a work-in-progress, you can find a more complete website <a href="https://ethanmarsland.wixsite.com/portfolio">here</a>. </p>
+  <p class = "sansserif"> This site is still a work-in-progress, you can find a complete website <a href="https://ethanmarsland.wixsite.com/portfolio">here</a>. </p>
 </article>
 
 <footer>Copyright &copy; Ethan Marsland, 2018</footer>
