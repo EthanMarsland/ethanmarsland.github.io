@@ -7,6 +7,8 @@ div.container {
     left: 100%;
 }
 
+/*header and footer*/
+
 header {
     float: center;
     padding: 1em;
@@ -26,6 +28,8 @@ footer{
     clear: left;
     text-align: center;
 }
+
+/*navigation and lists*/
 
 nav {
     float: left;
@@ -65,6 +69,8 @@ article {
     overflow: hidden;
 }
 
+/*fonts*/
+
 p.sansserif {
     font-family: Lato,Arial,Helvetica,sans-serif;
 }
@@ -84,6 +90,8 @@ p.sansserif {
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
  }
 
+/*links*/
+
  a:link, a:visited {
     color: rgb(69, 136, 114);
     text-decoration: none;
@@ -92,6 +100,26 @@ p.sansserif {
 a:hover {
     color: rgb(139, 105, 138);
     text-decoration: underline;
+}
+
+/*Drop Down menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 </style>
@@ -126,16 +154,24 @@ a:hover {
 
 </header> 
 
+<!--drop down menus-->
 <nav>
-    <ul>
-        <h3>Projects</h3>
-        <li><a href="#">Paradox Reflection</a></li>
-        <li><a href="#">OpenGL Application</a></li>
-        <li><a href="#">Unreal Engine 4 Plugin</a></li>
-        <li><a href="#">UE4 Prototype</a></li>
-        <li><a href="#">Dice Poker</a></li>
-    </ul>
+    <div class="dropdown">
+            <span><h3>Projects 
+                <svg width="16" height="9" viewBox="-2.5 4 75 60" preserveAspectRatio="none"><path d="M0,0 l35,50 l35,-50" fill="none" stroke="black" stroke-linecap="round" stroke-width="5" />
+                </svg></h3></span>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Paradox Reflection</a></li>
+                    <li><a href="#">OpenGL Application</a></li>
+                    <li><a href="#">Unreal Engine 4 Plugin</a></li>
+                    <li><a href="#">UE4 Prototype</a></li>
+                    <li><a href="#">Dice Poker</a></li>
+                </ul>
+            </div>
+        </div>            
 </nav>
+
 <!--profile-->
 <article>
   <h1>Profile</h1>
