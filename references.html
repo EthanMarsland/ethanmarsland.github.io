@@ -13,7 +13,7 @@ header {
     float: center;
     padding: 1em;
     color: rgb(53, 58, 50);
-    border-bottom: 2px solid rgb(184, 191, 192);
+    border-bottom: 2px solid rgba(202, 211, 212, 0.616);
     clear: left;
     text-align: center;
 }
@@ -33,6 +33,7 @@ nav {
     float: left;
     max-width: 180px;
     margin: 0;
+    margin-left: 200px;
     padding: 2em;
 }
 
@@ -62,7 +63,8 @@ ul bodylist {
 article {
     float: center;
     margin-left: 170px;
-    border-left: 1px solid gray;
+    border-left: 1px solid rgb(184, 191, 192);
+    max-width: 60%;
     padding: 1em;
     overflow: hidden;
 }
@@ -93,12 +95,21 @@ p.sansserif {
  a:link, a:visited {
     color: black;
     text-decoration: none;
+    font-family: Lato,Arial,Helvetica,sans-serif;
 }
 
 a:hover {
-    color: rgb(139, 105, 138);
+    color: rgb(192, 149, 166);
     text-decoration: none;
+    font-family: Lato,Arial,Helvetica,sans-serif;
 }
+
+ link1 {
+    line-height: 2;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-top: 1px solid rgba(121, 126, 128, 0.185); 
+ }
 
 /*Drop Down menu*/
 .dropdown {
@@ -107,6 +118,7 @@ a:hover {
 }
 
 .dropdown-content {
+    text-align: center;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -160,11 +172,11 @@ a:hover {
                 </svg></h3></span>
             <div class="dropdown-content">
                 <ul>
-                    <li><a href="#">Paradox Reflection</a></li>
-                    <li><a href="#">OpenGL Application</a></li>
-                    <li><a href="#">Unreal Engine 4 Plugin</a></li>
-                    <li><a href="#">UE4 Prototype</a></li>
-                    <li><a href="#">Dice Poker</a></li>
+                    <li><a href="#"><link1>Paradox Reflection</link1></a></li>
+                    <li><a href="#"><link1>OpenGL Application</link1></a></li>
+                    <li><a href="#"><link1>Unreal Engine 4 Plugin</link1></a></li>
+                    <li><a href="#"><link1>UE4 Prototype</link1></a></li>
+                    <li><a href="#"><link1>Dice Poker</link1></a></li>
                 </ul>
             </div>
     </div>   
