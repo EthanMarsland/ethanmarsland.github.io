@@ -62,7 +62,7 @@ ul bodylist {
 
 article {
     float: center;
-    margin-left: 170px;
+    margin-left: 160px;
     border-left: 1px solid rgb(184, 191, 192);
     max-width: 60%;
     padding: 1em;
@@ -75,9 +75,23 @@ p.sansserif {
     font-family: Lato,Arial,Helvetica,sans-serif;
 }
 
+
+ p.paragraphhead {
+    padding: 2em;
+    text-align: center;
+    font-weight:normal;
+    word-spacing: 10em;
+    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+
  h1 {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+ centertext{
+     text-align: center;
  }
 
  h2 {
@@ -89,6 +103,7 @@ p.sansserif {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
  }
+
 
 /*links*/
 
@@ -132,6 +147,30 @@ a:hover {
     display: block;
 }
 
+
+/*Image Gallery*/
+div.gallery {
+    float: left;
+    margin: 10px;
+    padding: 9px 12px;
+    border: 1px solid rgba(121, 126, 128, 0.185);
+    width: 360px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
 </style>
 </head>
 
@@ -140,7 +179,7 @@ a:hover {
 <div class="container">
 
 <header>
-    <a href="index.html"><h1 class = "sansserif">Ethan Marsland</h1></a>   
+   <a href="index.html"><h1 class = "sansserif">Ethan Marsland</h1></a>
    <p class = "sansserif">
         <socialnav>
                 <a href="https://github.com/EthanMarsland">
@@ -185,37 +224,41 @@ a:hover {
 
 <!--article-->
 <article>
-  <h1>References</h1>
-  <p class = "sansserif">This page is for information that I use to learn more or help me with my work, such as software and books. </p>
-
-  <p class = "sansserif"><h3>Programming</h3></p>
-  <p class = "sansserif">
-      <ul>
-            
-            <li><bodylist>C++ Primer Plus, Sixth Edition - Stephan Prata</bodylist></li>
-            <li><bodylist>3D Maths Primer for Graphics and Game Development, Second Edition - Dunn Parberry</bodylist></li>        
-            <li><bodylist>Sams Teach Yourself C++, Fifth Edition - Jesse Liberty, Rogers Cadenhead</bodylist></li>
-            <li><bodylist>C# In Depth, Third Edition - Jon Skeet</bodylist></li>
-      </ul>
+  <h1>Paradox Reflection</h1>
+  <p class = "sansserif">Paradox Reflection is a FPS developed as a major group project in my last year at AIE. As the only programmer I developed and wrote the technical
+      documents for the systems including the inventory, player interactions, and AI systems.
   </p>
+  <p class = "sansserif">Game Engine: Unreal Engine 4, version 4.15.1</p>
 
-  <p class = "sansserif"><h3>Science</h3></p>
-  <p class = "sansserif">
-        <ul>              
-              <li><bodylist>A Brief History of time - Stephan Hawking</bodylist></li>
-        </ul>  
-    </p>
+  <p class = "paragraphhead"><a href="https://gamejolt.com/games/ParadoxReflection/316002"> Gamejolt </a><a href="https://vimeo.com/263456850"> Vimeo </a></p>
 
-    <p class = "sansserif"><h3>Software</h3></p>
-    <p class = "sansserif">
-        <ul>              
-              <li><bodylist>Visual Studio & Visual Studio Code</bodylist></li>
-              <li><bodylist>Blender & Unreal Engine 4</bodylist></li>        
-              <li><bodylist>GitHub Desktop & GitHub</bodylist></li>
-              <li><bodylist>Dxtory & Fraps</bodylist></li>
-        </ul>
-    </p>
-
+  <p>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\paradoxreflection\header.png">        
+                  <img src="bin\projects\paradoxreflection\header.png" alt="Main Menu" width="600" height="400">
+                </a>
+                <div class="desc">Main Menu screen</div>
+        </div>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\paradoxreflection\study1.png">        
+                  <img src="bin\projects\paradoxreflection\study1.png" alt="Study Present" width="600" height="400">
+                </a>
+                <div class="desc">Present study room with monster</div>
+        </div>        
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\paradoxreflection\inventory.png">        
+                  <img src="bin\projects\paradoxreflection\inventory.png" alt="Inventory Screen" width="600" height="400">
+                </a>
+                <div class="desc">Inventory screen</div>
+        </div>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\paradoxreflection\study2.png">        
+                  <img src="bin\projects\paradoxreflection\study2.png" alt="Study Past" width="600" height="400">
+                </a>
+                <div class="desc">Past Study Room</div>
+        </div>        
+  </p>
+    
 </article>
 
 <footer>Copyright &copy; Ethan Marsland, 2018</footer>
