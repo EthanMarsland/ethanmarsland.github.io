@@ -75,9 +75,23 @@ p.sansserif {
     font-family: Lato,Arial,Helvetica,sans-serif;
 }
 
+
+ p.paragraphhead {
+    padding: 2em;
+    text-align: center;
+    font-weight:normal;
+    word-spacing: 10em;
+    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+
  h1 {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+ centertext{
+     float: center;
  }
 
  h2 {
@@ -89,6 +103,7 @@ p.sansserif {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
  }
+
 
 /*links*/
 
@@ -130,6 +145,31 @@ a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+/*Image Gallery*/
+div.gallery {
+    float: left;
+    margin: 10px;
+    padding: 9px 12px;
+    border: 1px solid rgba(121, 126, 128, 0.185);
+    width: 360px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
 }
 
 </style>
@@ -183,21 +223,24 @@ a:hover {
     <a href="references.html"><h3>References<h3></a>       
 </nav>
 
-<!--profile-->
+<!--article-->
 <article>
-  <h1>Profile</h1>
-  <p class = "sansserif">My name is Ethan Marsland and I am an Australian C++/Python Programmer specialised in game development. A few areas of expertise are: </p>
-  <p class = "sansserif">
-      <ul>
-            <li><bodylist>Physics</bodylist></li>
-            <li><bodylist>Networking</bodylist></li>        
-            <li><bodylist>Software Design</bodylist></li>
-            <li><bodylist>Artificial Intelligence</bodylist></li>
-      </ul>
+  <h1>UE4 Prototype</h1>
+  <p class = "sansserif">This is a new project that I've started from a blank C++ project to prototype ideas and learn features in Unreal Engine. 
+      In it's current state I've coded walking, sprinting, camera movement, and implemented a basic AI that follows the player.</p>
+  <p class = "sansserif">UE4 Version: 4.18.3</p>
 
+  <p class = "paragraphhead"><a href="https://vimeo.com/263457158"> Vimeo </a></p>
+
+  <p>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\ue4prototype\prototype.png">        
+                  <img src="bin\projects\ue4prototype\prototype.png" alt="UE4 Prototype" width="600" height="400">
+                </a>
+                <div class="desc">Unreal Engine 4 Prototype</div>
+        </div>  
   </p>
-  <p class = "sansserif">In March 2018 I graduated from the Academy of Interactive Entertainment, and now intend to study Psychology. This portfolio shows some of my work as a programmer, such as games and UE4 plugins.</p>
-  <p class = "sansserif"> I work on this site in my spare time.</a></p>
+    
 </article>
 
 <footer>Copyright &copy; Ethan Marsland, 2018</footer>

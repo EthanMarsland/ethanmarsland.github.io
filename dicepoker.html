@@ -75,9 +75,23 @@ p.sansserif {
     font-family: Lato,Arial,Helvetica,sans-serif;
 }
 
+
+ p.paragraphhead {
+    padding: 2em;
+    text-align: center;
+    font-weight:normal;
+    word-spacing: 10em;
+    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+
  h1 {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+ centertext{
+     float: center;
  }
 
  h2 {
@@ -89,6 +103,7 @@ p.sansserif {
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
  }
+
 
 /*links*/
 
@@ -130,6 +145,31 @@ a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+/*Image Gallery*/
+div.gallery {
+    float: left;
+    margin: 10px;
+    padding: 9px 12px;
+    border: 1px solid rgba(121, 126, 128, 0.185);
+    width: 360px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
 }
 
 </style>
@@ -183,21 +223,43 @@ a:hover {
     <a href="references.html"><h3>References<h3></a>       
 </nav>
 
-<!--profile-->
+<!--article-->
 <article>
-  <h1>Profile</h1>
-  <p class = "sansserif">My name is Ethan Marsland and I am an Australian C++/Python Programmer specialised in game development. A few areas of expertise are: </p>
-  <p class = "sansserif">
-      <ul>
-            <li><bodylist>Physics</bodylist></li>
-            <li><bodylist>Networking</bodylist></li>        
-            <li><bodylist>Software Design</bodylist></li>
-            <li><bodylist>Artificial Intelligence</bodylist></li>
-      </ul>
-
+  <h1>Dice Poker</h1>
+  <p class = "sansserif">An old project that was my major project for Software Design and Development during my HSC. 
+      I am currently working to clean up the source code and make it more Object Oriented, add networking and improve the user interface.
   </p>
-  <p class = "sansserif">In March 2018 I graduated from the Academy of Interactive Entertainment, and now intend to study Psychology. This portfolio shows some of my work as a programmer, such as games and UE4 plugins.</p>
-  <p class = "sansserif"> I work on this site in my spare time.</a></p>
+  <p class = "sansserif">Language: Python 3.4</p>
+
+  <p class = "paragraphhead"><a href="https://github.com/EthanMarsland/Projects"> GitHub </a>
+
+  <p>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\dicepoker\mainmenu.png">        
+                  <img src="bin\projects\dicepoker\mainmenu.png" alt="Main Menu" width="600" height="400">
+                </a>
+                <div class="desc">Main Menu screen</div>
+        </div>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\dicepoker\gamescreen.png">        
+                  <img src="bin\projects\dicepoker\gamescreen.png" alt="Game Screen" width="600" height="400">
+                </a>
+                <div class="desc">Game Screen</div>
+        </div>        
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\dicepoker\rulesscreen.png">        
+                  <img src="bin\projects\dicepoker\rulesscreen.png" alt="Rule Screen" width="600" height="400">
+                </a>
+                <div class="desc">Rule Screen</div>
+        </div>
+        <div class="gallery">
+                <a target="_blank" href="bin\projects\dicepoker\scoresscreen.png">        
+                  <img src="bin\projects\dicepoker\scoresscreen.png" alt="Score Screen" width="600" height="400">
+                </a>
+                <div class="desc">Score Screen</div>
+        </div>        
+  </p>
+    
 </article>
 
 <footer>Copyright &copy; Ethan Marsland, 2018</footer>
