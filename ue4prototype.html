@@ -158,19 +158,41 @@ a:hover {
 
 /*Image Gallery*/
 div.gallery {
-    float: left;
-    margin: 1%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
     padding: 9px 12px;
-    border: 1px solid rgba(121, 126, 128, 0.185);
-    width: 360px;
+    width: 50%;
 }
 
-div.gallery:hover {
+div.buttoncontainer {
+    float: left;
+    text-align: center;
+}
+
+div.buttonleft {
+    float: left;
+    text-align: center;
+    border: 1px solid rgba(50, 53, 54, 0.527);
+    max-width: 5%;
+    padding: 9px 12px;
+}
+
+div.buttonright {
+    float: right;
+    text-align: center;
+    border: 1px solid rgba(50, 53, 54, 0.527);
+    max-width: 5%;
+    padding: 9px 12px;
+}
+
+div.buttonleft:hover, div.buttonright:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
     border: 1px solid rgb(54, 41, 46);
 }
 
 div.gallery img {
+    float: center;
     width: 100%;
     height: auto;
 }
@@ -243,15 +265,48 @@ div.desc {
   <p class = "paragraphhead"><a href="https://vimeo.com/263457158"> Vimeo </a></p>
 
   <p>
-        <div class="gallery">
-                <a target="_blank" href="bin\projects\ue4prototype\prototype.png">        
-                  <img src="bin\projects\ue4prototype\prototype.png" alt="UE4 Prototype" width="600" height="400">
-                </a>
-                <div class="desc">Unreal Engine 4 Prototype</div>
-        </div>  
-  </p>
+        <div class="gallery" style="max-width:800px">
+                <img class="Slides" src="bin\projects\ue4prototype\prototype.png" style="width:100%">
+                <div class="buttoncontainer" style="width:100%">           
+
+                <div class= "buttonleft" onclick="plusDivs(-1)">&#10094;</div> <div class= "buttonright" onclick="plusDivs(1)">&#10095;</div>          
+        </div>      
+    </p>
     
 </article>
+
+<script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+                        
+        function plusDivs(n) 
+        {
+            showDivs(slideIndex += n);
+        }
+                        
+        function currentDiv(n) 
+        {
+            showDivs(slideIndex = n);
+        }
+                        
+        function showDivs(n) 
+        {
+            var i;
+            var x = document.getElementsByClassName("Slides");
+                    
+            if (n > x.length) 
+            {slideIndex = 1}    
+                    
+            if (n < 1) 
+            {slideIndex = x.length}
+                
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+                
+            x[slideIndex-1].style.display = "block";  
+        }
+        </script>
 
 <footer>Copyright &copy; Ethan Marsland, 2018</footer>
 
