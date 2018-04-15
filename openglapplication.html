@@ -108,6 +108,17 @@ p.sansserif {
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
  }
 
+div.noselect {
+    -webkit-touch-callout: none;    /* iOS Safari */
+    -webkit-user-select: none;      /* Safari */
+    -khtml-user-select: none;       /* Konqueror HTML */
+    -moz-user-select: none;         /* Firefox */
+    -ms-user-select: none;          /* Internet Explorer/Edge */
+    user-select: none;              /* Non-prefixed version, currently
+                                       supported by Chrome and Opera */
+}
+
+
 /*links*/
 
  a:link, a:visited {
@@ -158,6 +169,7 @@ div.gallery {
     display: block;
     padding: 9px 12px;
     width: 50%;
+    border: rgb(19, 30, 41);
 }
 
 div.buttoncontainer {
@@ -168,7 +180,6 @@ div.buttoncontainer {
 div.buttonleft {
     float: left;
     text-align: center;
-    border: 1px solid rgba(50, 53, 54, 0.527);
     max-width: 5%;
     padding: 9px 12px;
 }
@@ -176,14 +187,13 @@ div.buttonleft {
 div.buttonright {
     float: right;
     text-align: center;
-    border: 1px solid rgba(50, 53, 54, 0.527);
     max-width: 5%;
     padding: 9px 12px;
 }
 
 div.buttonleft:hover, div.buttonright:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgb(54, 41, 46);
+    cursor: pointer;
+    color: rgb(192, 149, 166)
 }
 
 div.gallery img {
@@ -260,15 +270,17 @@ div.desc {
   <p class = "paragraphhead"><a href="https://github.com/EthanMarsland/Projects">GitHub</a>
 
     <p>
+            <div id="foo" class="noselect">
             <div class="gallery" style="max-width:800px">
                     <img class="Slides" src="bin\projects\opengl\lighting.png" style="width:100%">
                     <img class="Slides" src="bin\projects\opengl\particles.png" style="width:100%">
                     <img class="Slides" src="bin\projects\opengl\boxbluroff.png" style="width:100%">
                     <img class="Slides" src="bin\projects\opengl\boxbluron.png" style="width:100%">
-                    <div class="buttoncontainer" style="width:100%">           
-    
-                    <div class= "buttonleft" onclick="plusDivs(-1)">&#10094;</div> <div class= "buttonright" onclick="plusDivs(1)">&#10095;</div>          
-            </div>      
+                    <div class="buttoncontainer" style="width:100%">          
+                    <div class= "buttonleft" onclick="plusDivs(-1)">&#10094;</div> <div class= "buttonright" onclick="plusDivs(1)">&#10095;</div>
+                    </div>
+            </div>     
+            </div> 
         </p>
     
 </article>
@@ -291,7 +303,7 @@ div.desc {
         {
             var i;
             var x = document.getElementsByClassName("Slides");
-                    
+
             if (n > x.length) 
             {slideIndex = 1}    
                     
@@ -302,7 +314,7 @@ div.desc {
                 x[i].style.display = "none";  
             }
                 
-            x[slideIndex-1].style.display = "block";  
+            x[slideIndex-1].style.display = "block"; 
         }
         </script>
 
