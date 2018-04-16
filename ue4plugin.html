@@ -88,12 +88,12 @@ p.sansserif {
 }
 
 
- p.paragraphhead {
-    padding: 2em;
+ p.centerparagraph {
     text-align: center;
     font-weight:normal;
-    word-spacing: 10em;
-    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-family: Lato,Arial,Helvetica,sans-serif;
  }
 
 
@@ -107,9 +107,14 @@ p.sansserif {
      float: center;
  }
 
- h2, h3, h4 {
+ h2, h3{
     font-weight:normal;
     font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+ }
+
+  h4 {
+    font-weight:normal;
+    font-family: Lato,Arial,Helvetica,sans-serif;
  }
 
 div.noselect {
@@ -141,6 +146,11 @@ a:hover {
     padding-top: 7px;
     padding-bottom: 7px;
     border-top: 1px solid rgba(121, 126, 128, 0.185); 
+ }
+
+   link2 {
+    text-decoration: underline;
+    font-family: Lato,Arial,Helvetica,sans-serif;
  }
 
 /*Drop Down menu*/
@@ -269,7 +279,7 @@ div.desc {
   <p class = "sansserif">This plugin is meant to assist developers with using sockets in UE4. It allows a device to connect and send data over a Wi-FI network.</p>
   <p class = "sansserif">UE4 Version: 4.15.1</p>
 
-  <p class = "paragraphhead"><a href="https://github.com/EthanMarsland/Projects"> GitHub </a><a href="https://vimeo.com/263457440"> Vimeo </a></p>
+  <p class = "centerparagraph">View the Source Code on <a href="https://github.com/EthanMarsland/Projects"><link2>Github</link2></a> or watch a video demonstration on <a href="https://vimeo.com/263457440"><link2>Vimeo</link2></a></p>
 
   <p>
         <div id="foo" class="noselect">
