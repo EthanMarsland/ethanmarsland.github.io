@@ -94,12 +94,12 @@ p.sansserif {
 }
 
 
-p.paragraphhead {
-    padding: 2em;
+ p.centerparagraph {
     text-align: center;
     font-weight:normal;
-    word-spacing: 10em;
-    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-family: Lato,Arial,Helvetica,sans-serif;
  }
 
 
@@ -149,6 +149,15 @@ a:hover {
     border-top: 1px solid rgba(121, 126, 128, 0.185); 
  }
 
+ link2 {
+    text-decoration: underline;
+    font-family: Lato,Arial,Helvetica,sans-serif;
+ }
+
+ .navlink{
+    padding-top: 2px;
+ }
+
 /*Drop Down menu*/
 .dropdown {
     position: relative;
@@ -168,6 +177,58 @@ a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/*Image Gallery*/
+div.gallery {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 9px 12px;
+    width: 50%;
+}
+
+div.buttoncontainer {
+    float: left;
+    text-align: center;
+}
+
+div.buttonleft {
+    float: left;
+    text-align: center;
+    color:rgb(59, 67, 75);
+    max-width: 5%;
+    padding: 9px 12px;
+}
+
+div.buttonright {
+    float: right;
+    text-align: center;
+    color: rgb(59, 67, 75);
+    max-width: 5%;
+    padding: 9px 12px;
+}
+
+div.buttonleft:hover, div.buttonright:hover {
+    cursor: pointer;
+    color: rgb(192, 149, 166)
+}
+
+div.gallery img {
+    float: center;
+    width: 100%;
+    height: auto;
+}
+
+
+div.gallery img:hover{
+    box-shadow: 5px 8px 16px 5px rgba(0, 0, 0, 0.315);
+}
+
+div.desc {
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: PTSansRegular,Arial,Helvetica,sans-serif;
 }
 
 </style>
@@ -218,28 +279,83 @@ a:hover {
                 </ul>
             </div>
     </div>   
-    <a href="references.html"><h3>References<h3></a>       
+    <div class = "navlink"><a href="about.html"><h3>About<h3></a></div>  
+    <div class = "navlink"><a href="references.html"><h3>References<h3></a> </div>           
 </nav>
 
 <!--profile-->
 <article>
-  <h1>Profile</h1>
+  <h1>Showcase</h1>
   <hr>
-  <p class = "sansserif">I am a C++/Python Programmer from Sydney Australia. Specialised in game development, a few areas of expertise are: </p>
-  <p class = "sansserif">
-      <ul>
-            <li><bodylist>Physics</bodylist></li>
-            <li><bodylist>Networking</bodylist></li>        
-            <li><bodylist>Software Design</bodylist></li>
-            <li><bodylist>Artificial Intelligence</bodylist></li>
-      </ul>
 
-  </p>
-  <p class = "sansserif">I completed study at the Academy of Interactive Entertainment in December 2017 and now intend to study Psychology at University. 
-      This portfolio shows some of my work as a programmer, such as games and UE4 plugins.</p>
-    
-   <p class = "sansserif">I also have experience in 3D Art & Animation using Blender, as well as using its Python game engine.</p>
+  <p>
+    <div id="foo" class="noselect">
+    <div class="gallery" style="max-width:800px">
+            <div id="gallerydesc" class = "desc"><h2>Description</h2></div>
+        <a href="paradoxreflection.html"><img class="Slides" src="bin\projects\pr\mainmenu.png" style="width:100%"></a>
+        <a href="openglapplication.html"><img class="Slides" src="bin\projects\opengl\particles.png" style="width:100%"></a>
+        <a href="ue4prototype.html"><img class="Slides" src="bin\projects\ue4prototype\prototype.png" style="width:100%"></a>
+
+        <div class="buttoncontainer" style="width:100%">           
+        <div class= "buttonleft" onclick="plusDivs(-1)">&#10094;</div>   <div class= "buttonright" onclick="plusDivs(1)">&#10095;</div>  
+
+        </div>
+        </div>      
+    </div>
+    <p class = "centerparagraph">Click image to open project page.</p>      
+</p>
+
 </article>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+                    
+    function plusDivs(n) 
+    {
+        showDivs(slideIndex += n);
+    }
+                    
+    function currentDiv(n) 
+    {
+        showDivs(slideIndex = n);
+    }
+                    
+    function showDivs(n) 
+    {
+        var i;
+        var x = document.getElementsByClassName("Slides");
+                
+        if (n > x.length) 
+        {slideIndex = 1}    
+                
+        if (n < 1) 
+        {slideIndex = x.length}
+            
+            
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+            
+        x[slideIndex-1].style.display = "block";
+
+        setDesc(slideIndex); 
+    }
+    
+    function setDesc(n)
+    {
+        if(n == 1){
+            document.getElementById('gallerydesc').innerHTML = 'Paradox Reflection';
+        }  
+        if(n == 2){
+            document.getElementById('gallerydesc').innerHTML = 'OpenGL Application';
+        }  
+        if(n == 3){
+            document.getElementById('gallerydesc').innerHTML = 'Prototype';
+        }  
+    }
+    </script> 
+
 
 <footer>Copyright &copy; Ethan Marsland, 2018</footer>
 
