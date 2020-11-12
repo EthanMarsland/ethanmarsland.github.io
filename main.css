@@ -9,7 +9,7 @@ header {
     float: center;
     padding: 1em;
     color: rgb(19, 30, 41);
-    border-bottom: 2px solid rgba(170, 206, 163, 0.616);
+    border-bottom: 2px solid rgba(13, 10, 60, 0.400);
     clear: left;
     text-align: center;
 }
@@ -33,7 +33,7 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 0.5px;
-    color: rgba(170, 206, 163, 0.616);
+    color: rgba(13, 10, 60, 0.616);
 }
 
 
